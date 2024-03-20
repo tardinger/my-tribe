@@ -1,8 +1,11 @@
 function showText(text) {
-    document.getElementById("fish15").innerText = text;
-    document.getElementById("displayTextContainer").style.display = "block";
+    if ( document.getElementById("fish15").innerText == text){
+      document.getElementById("fish15").innerText = "";
+    } else {
+      document.getElementById("fish15").innerText = text;
+    }
   }
   
-  function hideText() {
-    document.getElementById("displayTextContainer").style.display = "none";
-  }
+// function hideText() {
+//     document.getElementById("fish15").innerText = "hello";
+//   }
