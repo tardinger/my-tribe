@@ -17,7 +17,7 @@ function changeCharacterOne() {
 
   if (currentContent.startsWith("<img")) {
     // If the current content is an image, switch to text
-    character.innerHTML = "character1 text";
+    character.innerHTML = "<h1>JOE</h1><h2>skill: gatherer</h2><h2>level: 10</h2><h2>strength: 7</h2>";
   } else {
     // If the current content is text, switch to image
     character.innerHTML = '<img src="img/character1.png">';
@@ -30,9 +30,22 @@ function changeCharacterTwo() {
 
   if (currentContent.startsWith("<img")) {
     // If the current content is an image, switch to text
-    character.innerHTML = "character2 text";
+    character.innerHTML = "<h1>TRISHA</h1><h2>skill: Fisher</h2><h2>level: 8</h2><h2>strength: 9</h2>";
   } else {
     // If the current content is text, switch to image
     character.innerHTML = '<img src="img/character2.png">';
+  }
+}
+
+function changeCharacterThree() {
+  var character = document.getElementById("character3");
+  var currentContent = character.innerHTML.trim();
+
+  if (currentContent.startsWith("<img")) {
+    // If the current content is an image, switch to text
+    character.innerHTML = "<h1>TODD</h1><h2>skill: Medic</h2><h2>level: 4</h2><h2>strength: 8</h2>";
+  } else {
+    // If the current content is text, switch to image
+    character.innerHTML ='<img src="img/character3.png">';
   }
 }
