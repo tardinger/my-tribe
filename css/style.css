@@ -1,221 +1,298 @@
-#map{
-    background-image: url(../img/Main_Map_Background_G1.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgb(0, 0, 0);
-    background-position: absolute;
+#map {
+  background-image: url(../img/Main_Map_Background_G1.gif);
+  background-repeat: no-repeat;
+
+  /* this makes the background image always the width of the window */
+  background-size: 100vw 100vh;
+  background-color: rgb(0, 0, 0);
 }
 
 #house {
-    background-image: url(../img/househomebg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgb(0, 0, 0);
-    background-position: absolute;
+  background-image: url(../img/househomebg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(0, 0, 0);
+  background-position: absolute;
 }
 
 #fish {
-    background-image: url(../img/fishbgG1.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgb(0, 0, 0);
-    background-position: absolute;
+  background-image: url(../img/fishbgG1.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(0, 0, 0);
+  background-position: absolute;
 }
 
 #gather {
-    background-image: url(../img/gatherbgG1.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgb(0, 0, 0);
-    background-position: absolute;
+  background-image: url(../img/gatherbgG1.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(0, 0, 0);
+  background-position: absolute;
 }
 
 #medic {
-    background-image: url(../img/clickedbackground.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgb(0, 0, 0);
-    background-position: absolute;
+  background-image: url(../img/clickedbackground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(0, 0, 0);
+  background-position: absolute;
+}
+#whoareyou {
+  background-image: url(../img/waybg.png);
+  background-repeat: no-repeat;
+
+  /* this makes the background image always the width of the window */
+  background-size: 100vw 100vh;
+  background-color: rgb(0, 0, 0);
+}
+#clickedhouse{
+  background-image: url(../img/clickedhousebgG1.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(0, 0, 0);
+  background-position: absolute;
 }
 
-.homeicon{
+.housebutton{
+  position: absolute;
+  left: 30.5%;
+  top: 49%;
+}
+
+.homeicon {
   margin-top: 50px;
   margin-bottom: 70px;
   margin-left: 30px;
 }
-.homeicongather{
+.homeicongather {
   margin-top: 30px;
   margin-bottom: 70px;
   margin-left: 30px;
 }
-.homeiconhouse{
+.homeiconhouse {
   margin: none;
 }
-
-h1{
-    font-family: "Irish Grover", system-ui;
-    color: #ffffff;
-    font-size: 55px;
-    text-align: center;
+.homeiconway{
+  margin-top: 45px;
+  margin-bottom: 70px;
+  margin-left: 45px;
 }
 
-h2{
-    font-family: "Irish Grover", system-ui;
-    color: #ffffff;
-    font-size: 30px;
-    text-align: center;
+h1 {
+  font-family: "Irish Grover", system-ui;
+  color: #ffffff;
+  font-size: 55px;
+  text-align: center;
 }
-.gridlayout{
+
+.housepagetitle{
+  text-align: center;
+  font-size: 40px;
+  margin: none;
+  color: black;
+}
+
+h2 {
+  font-family: "Irish Grover", system-ui;
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* no longer need a grid layout on the homepage */
+
+/* .gridlayout {
   display: grid;
-  grid-template-columns: 10% 20% 10% 10% 10% 10% 10% 10%; 
+  grid-template-columns: 10% 20% 10% 10% 10% 10% 10% 10%;
   gap: 10px;
-  grid-template-rows:minmax(100px) 100px 100px 100px;
+  grid-template-rows: minmax(100px) 100px 100px 100px;
   margin-top: 150px;
+} */
+
+/* grouped the navigation items into a box that I positioned absolutely */
+#nav-container {
+  width: 20%;
+  position: absolute;
+  left: 10%;
+  top: 25%;
 }
-    .wayb{
-        grid-column: 2;
-        grid-row: 2;
-    }
 
-    .skillb{
-      grid-column: 2;
-      grid-row: 3;
-    }
+#nav-container div {
+  margin-bottom: 75px;
+}
 
-    .faqb{
-      grid-column: 2;
-      grid-row: 4;
-    }
+/* makes sure the images for those three links stay the right size */
 
-    .medichome{
-        grid-column: 6;
-        grid-row: 4;
-    }
+.wayb,
+.wayb img {
+  width: 100%;
+}
 
-    .gatherhome{
-        grid-column: 7;
-        grid-row: 3 ;
-    }
+.skillb,
+.skillb img {
+  width: 100%;
+}
 
-    .fisherhome{
-        grid-column: 7 ;
-        grid-row: 1;
-    }
+.faqb,
+.faqb img {
+  width: 100%;
+}
 
-    .househome{
-        grid-column: 6;
-        grid-row: 3;
-    }
+/* 
+rather than give these icons grid locations, now they are positioned absolutely and placed 
+using the left and top properties. I used a percentage so they stay in the same relative
+location even when the window resizes */
 
-.fishergrid{
+.medichome {
+  position: absolute;
+  left: 65%;
+  top: 48%;
+}
+
+.gatherhome {
+  position: absolute;
+  left: 70%;
+  top: 40%;
+}
+
+.fisherhome {
+  position: absolute;
+  left: 75%;
+  top: 15%;
+}
+
+.househome {
+  position: absolute;
+  left: 62%;
+  top: 30%;
+}
+
+.fishergrid {
   display: grid;
   gap: 5px;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: 200px 200px 200px;
 }
 
-  .fish1{
-    grid-column: 2;
-    grid-row: 1;
-  }
-  .fish2{
-    grid-column: 3;
-    grid-row: 1;
-  }
-  .fish3{
-    grid-column: 4;
-    grid-row: 1;
-  }
-  .fish4{
-    grid-column: 5;
-    grid-row: 1;
-  }
-  .fish5{
-    grid-column: 6;
-    grid-row: 1;
-  }
-  .fish6{
-    grid-column: 7;
-    grid-row: 1;
-  }
-  .fish7{
-    grid-column: 2;
-    grid-row: 2;
-  }
-  .fish8{
-    grid-column: 3;
-    grid-row: 2;
-  }
-  .fish9{
-    grid-column: 4;
-    grid-row: 2;
-  }
-  .fish10{
-    grid-column: 5;
-    grid-row: 2;
-  }
-  .fish11{
-    grid-column: 6;
-    grid-row: 2;
-  }
-  .fish12{
-    grid-column: 7;
-    grid-row: 2;
-  }
-  .fish13{
-    grid-column: 2;
-    grid-row: 3;
-  }
-  .fish14{
-    grid-column: 3;
-    grid-row: 3;
-  }
-  #fish15{
-    grid-column: 4;
-    grid-row: 3;
-    text-align: center;
-    font-size: 30px;
-    color: #ffffff;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-  .fish16{
-    grid-column: 5;
-    grid-row: 3;
-  }
-  .fish17{
-    grid-column: 6;
-    grid-row: 3;
-  }
-  .fish18{
-    grid-column: 7;
-    grid-row: 3;
-  }
-  .fish19{
-    grid-column: 2;
-    grid-row: 4;
-  }
-  .fish20{
-    grid-column: 3;
-    grid-row: 4;
-  }
-  .fish21{
-    grid-column: 4;
-    grid-row: 4;
-  }
-  .fish22{
-    grid-column: 5;
-    grid-row: 4;
-  }
-  .fish23{
-    grid-column: 6;
-    grid-row: 4;
-  }
-  .fish24{
-    grid-column: 7;
-    grid-row: 4;
-  }
+.fish1 {
+  grid-column: 2;
+  grid-row: 1;
+}
+.fish2 {
+  grid-column: 3;
+  grid-row: 1;
+}
+.fish3 {
+  grid-column: 4;
+  grid-row: 1;
+}
+.fish4 {
+  grid-column: 5;
+  grid-row: 1;
+}
+.fish5 {
+  grid-column: 6;
+  grid-row: 1;
+}
+.fish6 {
+  grid-column: 7;
+  grid-row: 1;
+}
+.fish7 {
+  grid-column: 2;
+  grid-row: 2;
+}
+.fish8 {
+  grid-column: 3;
+  grid-row: 2;
+}
+.fish9 {
+  grid-column: 4;
+  grid-row: 2;
+}
+.fish10 {
+  grid-column: 5;
+  grid-row: 2;
+}
+.fish11 {
+  grid-column: 6;
+  grid-row: 2;
+}
+.fish12 {
+  grid-column: 7;
+  grid-row: 2;
+}
+.fish13 {
+  grid-column: 2;
+  grid-row: 3;
+}
+.fish14 {
+  grid-column: 3;
+  grid-row: 3;
+}
+#fish15 {
+  grid-column: 4;
+  grid-row: 3;
+ 
+  font-size: 30px;
+  color: #ffffff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.fish16 {
+  grid-column: 5;
+  grid-row: 3;
+}
+.fish17 {
+  grid-column: 6;
+  grid-row: 3;
+}
+.fish18 {
+  grid-column: 7;
+  grid-row: 3;
+}
+.fish19 {
+  grid-column: 2;
+  grid-row: 4;
+}
+.fish20 {
+  grid-column: 3;
+  grid-row: 4;
+}
+.fish21 {
+  grid-column: 4;
+  grid-row: 4;
+}
+.fish22 {
+  grid-column: 5;
+  grid-row: 4;
+}
+.fish23 {
+  grid-column: 6;
+  grid-row: 4;
+}
+.fish24 {
+  grid-column: 7;
+  grid-row: 4;
+}
+
+.character1{
+  position: absolute;
+  left: 10%;
+  top: 30%;
+}
+.character2{
+  position: absolute;
+  left: 40%;
+  top: 30%;
+}
+.character3{
+  position: absolute;
+  left: 70%;
+  top: 30%;
   
-  
-img:hover{
-    transform: scale(1.3);
- }
+}
+
+img:hover {
+  transform: scale(1.3);
+}
