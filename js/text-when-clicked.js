@@ -62,3 +62,15 @@ function changeCoconut() {
     coconut4.innerHTML = '<img src="img/coconut1.gif" alt="coconut" width="100px">';
   }
 }
+function changePotion() {
+  var potion4 = document.getElementById("potion4");
+  var currentContent = potion4.innerHTML.trim();
+
+  if (currentContent.startsWith("<img")) {
+    // If the current content is an image, switch to text
+    potion4.innerHTML = "Congrats! You found the correct ingredient!.";
+  } else {
+    // If the current content is text, switch to image
+    potion4.innerHTML = '<img src="img/potion.png" alt="potion" width="150px">';
+  }
+}
