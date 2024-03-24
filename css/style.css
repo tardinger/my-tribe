@@ -46,6 +46,17 @@
   background-size: 100vw 100vh;
   background-color: rgb(0, 0, 0);
 }
+#skill{
+  background-image: url(../img/clickedbackground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(0, 0, 0);
+  background-position: absolute;
+}
+.skilltext{
+  text-align: center;
+  margin-top: 5%;
+}
 #clickedhouse{
   background-image: url(../img/clickedhousebgG1.gif);
   background-repeat: no-repeat;
