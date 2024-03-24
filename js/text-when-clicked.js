@@ -49,3 +49,16 @@ function changeCharacterThree() {
     character.innerHTML ='<img src="img/character3.png">';
   }
 }
+
+function changeCoconut() {
+  var coconut4 = document.getElementById("coconut4");
+  var currentContent = coconut4.innerHTML.trim();
+
+  if (currentContent.startsWith("<img")) {
+    // If the current content is an image, switch to text
+    coconut4.innerHTML = "Congrats! You found the fresh coconut.";
+  } else {
+    // If the current content is text, switch to image
+    coconut4.innerHTML = '<img src="img/coconut1.gif" alt="coconut" width="100px">';
+  }
+}
